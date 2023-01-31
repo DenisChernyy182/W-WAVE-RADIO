@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*!
+ * Accordion v3.1.1
+ * Simple accordion created in pure Javascript.
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright (c) Michał Strumpf
+ * Published under MIT License
+ */
+.ac{box-sizing:border-box}
+
+.ac .ac-trigger{display: flex;
+    justify-content: space-between; align-items: center; width:100%;cursor:pointer;background-color:transparent;-webkit-transition:color .25s ease;transition:color .25s ease;position:relative;text-decoration:none;margin:0;border:0}
+.ac .ac-trigger::after{text-align:center;width:15px;-webkit-transform:translate(0,-50%);transform:translate(0,-50%);position:absolute;right:10px;top:50%}.ac .ac-trigger:focus{color:#fff;border: none;}
+.ac .ac-panel{overflow:hidden;-webkit-transition-property:height,visibility;transition-property:height,visibility;-webkit-transition-timing-function:ease;transition-timing-function:ease;color: #fff;}
+.ac .ac-panel .ac-text{padding:10px;margin:0}
+.ac.js-enabled .ac-panel{visibility:hidden;transition: .3s ease;}
+.ac.is-active .ac-panel{visibility:visible;transition: .3s ease;}
+.ac .ac-trigger:active{color:#fff;border: none;}
