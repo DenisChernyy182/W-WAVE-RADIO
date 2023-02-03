@@ -40,6 +40,8 @@ body {
     --yellow-color:#CCB26E;
     --spase-gray:#D2D5DD;
     --gold-color:#F0D288;
+    --color-red:#D52B1E;
+
 }
 
 @font-face {
@@ -1756,6 +1758,12 @@ button:focus {
     justify-content: center;
 }
 
+.just-validate-error-label {
+    position: relative;
+    bottom: 64px;
+    left: 10px;
+}
+
 /* swiper */
 
 .swiper {
@@ -1793,8 +1801,9 @@ button:focus {
 }
 
 .abautUs-input_textarea {
+    width: 100%;
     max-width: 920px;
-    max-height: 150px;
+    height: 150px;
     border-radius: 30px;
     border: 1px solid var(--focus-color);
     background-color: var(--color-black);
@@ -1802,9 +1811,36 @@ button:focus {
     font-size: 16px;
     line-height: 20px;
     color: var(--color-gray);
-    padding-top: 30px;
+    /* padding-top: 30px; */
     padding-left: 30px;
     margin-bottom: 30px;
+}
+
+.abautUs-input_content {
+    display: flex;
+}
+
+.error  .abautUs-input_textarea {
+    border-color: var(--color-red);
+}
+
+.error .abautUs-input_content_email {
+    border-color: var(--color-red);
+}
+
+.error .abautUs-input_content_name {
+    border-color: var(--color-red);
+}
+
+.error-label {
+    color: var(--color-red);
+    font-family: 'Muller';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    /* position: relative;
+    right: 448px;
+    bottom: 20px; */
 }
 
 .abautUs-input_content_name, .abautUs-input_content_email {

@@ -86,3 +86,94 @@ const swiper = new Swiper('.swiper',{
   },
 
 });
+
+// const validation = new JustValidate('.form');
+
+// validation
+// .addField('#message', [
+//   {
+//     rule: 'required',
+//     errorMessage: 'Введите сообщение!',
+//   },
+//   {
+//     rule: 'email',
+//     errorMessage: 'Введите сообщение!',
+//   },
+// ])
+
+// .addField('#name', [
+//   {
+//     rule: 'required',
+//     errorMessage: 'ошибка',
+//   },
+//   {
+//     rule: 'email',
+//     errorMessage: 'ошибка',
+//   },
+// ])
+
+//   .addField('#email', [
+//     {
+//       rule: 'required',
+//       errorMessage: 'Вы не ввели e-mail',
+//       errorLabelStyle: {
+//         color: '#FF5C00',
+//       },
+//     },
+//     {   
+//       rule: 'email',
+//       errorMessage: 'Вы не ввели e-mail',
+//       errorLabelStyle: {
+//         color: '#FF5C00',
+//       },
+//     },
+//   ]);
+
+//   const input = new JustValidate('.form', {
+//     errorLabelStyle: {
+//       color: '#FF5C00',
+//     },
+// });
+
+
+
+
+function validation(form) {
+
+  function createError (input, text) {
+    const parent = input.parentNode;
+    const errorLabel = document.createElement('label');
+
+    errorLabel.classList.add('error-label');
+    errorLabel.textContent = text;
+
+    parent.classList.add('error');
+
+    parent.append(errorLabel)
+  }
+
+  let result = true;
+
+  const allInput = form.querySelectorAll( 'input');
+
+  for (const input of allInput) {
+    if(input.value == '') {
+      createError(input, 'Ошибка')
+      result = false;
+    } 
+  }
+
+  
+
+  return result
+}
+
+document.getElementById('add-form').addEventListener('submit', function(event) {
+  event.preventDefault()
+  
+  if(validation(this) == true) {
+    alert('ПРОБЛЕМ НЕТ')
+  }
+})
+
+

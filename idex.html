@@ -1426,18 +1426,26 @@
 
                 </div>
             </div>
-            <div class="abautUs-input">
-                    <textarea class="abautUs-input_textarea" name="message" id="message" cols="30" rows="10">Что скажете?</textarea>
+
+            <form class="abautUs-input form" id="add-form">
+                <div class="form-box">
+                    <input class="abautUs-input_textarea message" name="message" id="message" placeholder="Что скажете?">
+                </div>    
                 <div class="abautUs-input_content">
-                    <input class="abautUs-input_content_name" type="text" name="Имя" placeholder="Имя">
-                    <input class="abautUs-input_content_email" type="email" name="Email" placeholder="Email">
+                    <div class="form-box">
+                        <input class="abautUs-input_content_name name" type="text" id="name" name="Имя" placeholder="Имя">
+                    </div>  
+                    <div class="form-box">    
+                        <input class="abautUs-input_content_email email" type="email" id="email" name="email" placeholder="Email">
+                    </div>    
                 </div>
                 <button class="abautUs-input_btn">Отправить</button>
                 <div class="abautUs-input_checkbox">  
                     <input class="abautUs-input_check-box_input" type="checkbox" id="1">
                     <label class="abautUs-input_check-box_label" for="1">Согласен на обработку персональных данных</label>
                 </div>
-            </div>
+            </form>
+
         </div>   
     </div>
 
@@ -1492,7 +1500,8 @@
         </div>
     </footer>
 
-
+    <script defer src="libs/just-validate.min.js"></script>
+	<script defer src="libs/inputmask.min.js"></script>
     <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script defer src="./js/accordion.min.js"></script>
     <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
